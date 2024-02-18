@@ -1,6 +1,6 @@
 /*
   midi-loop-switcher
-  Light weight sketch for switching signal relays based on midi cc changes
+  Lightweight sketch for switching signal relays based on midi cc changes
   Requires the excellent arduino_midi_library from Forty Seven Effects https://github.com/FortySevenEffects/arduino_midi_library
 */
 
