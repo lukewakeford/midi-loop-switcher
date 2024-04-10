@@ -5,43 +5,28 @@
 */
 
 #include <MIDI.h>
+#include <HardwareSerial.h>
+// #include <BLEMIDI_Transport.h>
+// #include <hardware/BLEMIDI_ESP32.h>
 
-const int midiChannel = 2;
+// BLEMIDI_CREATE_DEFAULT_INSTANCE();
 
-const int relayOnePin = 12;
-const int relayTwoPin = 14;
-const int relayThreePin = 4;
-const int relayFourPin = 5;
+#define midiChannel 2
+#define relayOnePin 2
+#define relayTwoPin 3
+#define relayThreePin 4
+#define relayFourPin 5
+#define RX 20
+#define TX 21
 
-MIDI_CREATE_DEFAULT_INSTANCE();
-
-// engages/disengaged relays based on a midi control change
-void handleControlChange(
-  byte channel, 
-  byte number, 
-  byte value
-){
-  // generate the state based on the midi value
-  // 0-64 = LOW - 64-127 = HIGH
-  uint8_t STATE = ( value > 64 ) ? HIGH : LOW;
-  // set the relay state based on cc numbers 1-4
-  switch (number) {
-  case 1:
-    digitalWrite(relayOnePin, STATE); 
-    break;
-  case 2:
-    digitalWrite(relayTwoPin, STATE); 
-    break;
-  case 3:
-    digitalWrite(relayThreePin, STATE); 
-    break;
-  case 4:
-    digitalWrite(relayFourPin, STATE); 
-    break;
-  }
-}
+MIDI_CREATE_INSTANCE(HardwareSerial, Serial1, MIDI);
 
 void setup(){
+  // usb serial
+  Serial.begin(115200);
+  // midi serial
+  Serial1.begin(31250, SERIAL_8N1, RX, TX);
+
   // configure digital pins
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(relayOnePin, OUTPUT);
@@ -57,4 +42,36 @@ void setup(){
 void loop(){
   // read midi for the callback
   MIDI.read();
+}
+
+// engages/disengaged relays based on a midi control change
+void handleControlChange(
+  byte channel, 
+  byte number, 
+  byte value
+){
+  // generate the state based on the midi value
+  // 0-64 = LOW - 64-127 = HIGH
+  uint8_t STATE = ( value > 64 ) ? HIGH : LOW;
+  // set the relay state based on cc numbers 1-4
+  Serial.print("channel:");
+  Serial.println(channel);
+  Serial.print("number:");
+  Serial.println(number);
+  Serial.print("value:");
+  Serial.println(value);
+  switch (number) {
+  case 1:
+    digitalWrite(relayOnePin, STATE); 
+    break;
+  case 2:
+    digitalWrite(relayTwoPin, STATE); 
+    break;
+  case 3:
+    digitalWrite(relayThreePin, STATE); 
+    break;
+  case 4:
+    digitalWrite(relayFourPin, STATE); 
+    break;
+  }
 }
