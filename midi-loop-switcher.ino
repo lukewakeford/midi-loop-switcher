@@ -54,12 +54,6 @@ void handleControlChange(
   // 0-64 = LOW - 64-127 = HIGH
   uint8_t STATE = ( value > 64 ) ? HIGH : LOW;
   // set the relay state based on cc numbers 1-4
-  Serial.print("channel:");
-  Serial.println(channel);
-  Serial.print("number:");
-  Serial.println(number);
-  Serial.print("value:");
-  Serial.println(value);
   switch (number) {
   case 1:
     digitalWrite(relayOnePin, STATE); 
