@@ -1,9 +1,16 @@
-# v1.0
+# v3.0
 
-Midi loop switcher, designed to fit undneath a guitar pedal board and enabled switching of up to 4 mono effects pedals.
+MIDI loop switcher, designed to fit underneath a guitar pedal board and enable switching of up to 4 mono effects pedals.
 
-Makes use of 3.5mm stereo jacks to carry mono signals to and from each effects pedal, this requires 3.5mm stereo to 6.5mm mono splitter cables to split the signal (I've also designed a small circuit board to perform this function tba.)
+# Features
+- Hardware MIDI in and out via 3.5mm TRS
+- I/O for up to 4 mono effects pedals via 3.5mm TRS
+- ESP32 SuperMini (enables BLE-MIDI through)
+- MINI560 Pro PSU (5V-20V in to 5V out step-down buck converter)
 
-Built around the ESP8266 with a light weight sketch for switching signal relays.
+# Of Note
+Uses 3.5mm stereo TRS to carry mono signals to and from each effects pedal, which breaks from the 6.5mm standard slightly and requires 3.5mm stereo to 6.5mm mono splitter cables (I've also designed a small circuit board to perform this function, TBA.).
 
-Uses Forty Seven Effects https://github.com/FortySevenEffects/arduino_midi_library to listen for Midi CC changes on channel 2, numbers 1-4, value 0-64 = OFF / 64-127 = ON
+# Depends on
+BLE-MIDI transport https://github.com/lathoub/Arduino-BLE-MIDI
+FortySevenEffects MIDI Library https://github.com/FortySevenEffects/arduino_MIDI_library
