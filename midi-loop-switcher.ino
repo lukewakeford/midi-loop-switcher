@@ -51,6 +51,8 @@ void setup(){
   BLUETOOTHMIDI.begin(MIDI_CHANNEL_OMNI);
   HARDWAREMIDI.setHandleControlChange(handleControlChange);
   HARDWAREMIDI.begin(midiInputChannel);
+  // Disable hardware midi thru to avoid clashing issues
+  HARDWAREMIDI.turnThruOff();
 }
 
 void loop(){
