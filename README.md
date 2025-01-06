@@ -1,5 +1,5 @@
 # v3.0
-A compact MIDI-controlled loop switcher designed to fit beneath a guitar pedalboard. It enables efficient switching of up to four mono effects pedals, using an ESP32 development board for processing. The device features BLE MIDI connectivity, relay-based signal switching, and LED indicators for clear visual feedback.
+A compact MIDI-controlled loop switcher designed to fit beneath a guitar pedalboard. It enables efficient switching / bypassing of up to four mono effects pedals, using an ESP32 development board for processing. The device features BLE MIDI connectivity, relay-based signal switching, and LED indicators for clear visual feedback.
 
 ![Loop Switcher Diagram](https://lukewakeford.co.uk/wp-content/uploads/2025/01/LoopSwitcherDiagram.png)
 ![Circuit Board Unpopulated](https://i.imgur.com/rXYmMo1.jpeg)
