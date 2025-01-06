@@ -6,7 +6,7 @@ A compact MIDI-controlled loop switcher designed to fit beneath a guitar pedalbo
 ![Circuit Board Populated](https://i.imgur.com/NJytogt.jpeg)
 
 # Features
-- **Hardware MIDI I/O:** MIDI input and output supported via 3.5mm TRS connectors, ensuring compatibility with modern MIDI standards.
+- **Hardware MIDI I/O:** MIDI input and output supported via 3.5mm TRS connectors, ensuring compatibility with modern MIDI standards. Checkout my other project [slimdin.uk](https://slimdin.uk) for the smallest 5pin din to trs midi adapter you've seen in a while.
 - **Effects Loop Integration:** Supports up to 4 mono effects pedals, with signal routing through 3.5mm TRS connections for a streamlined setup.
 - **ESP32 SuperMini:** Provides processing power and enables BLE-MIDI passthrough for seamless wireless MIDI communication.
 - **MINI560 Pro PSU:** High-efficiency step-down buck converter accepts 5V to 20V input and outputs a stable 5V, ensuring reliable power delivery to the system.
