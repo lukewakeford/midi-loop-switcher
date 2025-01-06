@@ -17,7 +17,6 @@ A compact MIDI-controlled loop switcher designed to fit beneath a guitar pedalbo
 ![LoopSwitcherDiagram](https://github.com/user-attachments/assets/ce536639-fe6f-47b1-a9bc-3814a44265fb)
 
 # Build Pictures
-![Circuit Board Unpopulated](https://i.imgur.com/rXYmMo1.jpeg)
 ![Circuit Board Populated](https://i.imgur.com/NJytogt.jpeg)
 
 # 3.5 vs 6.5mm TRS
