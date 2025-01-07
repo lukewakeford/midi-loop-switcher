@@ -16,7 +16,81 @@ A compact MIDI-controlled loop switcher designed to fit beneath a guitar pedalbo
   
 ![LoopSwitcherDiagram](https://github.com/user-attachments/assets/ce536639-fe6f-47b1-a9bc-3814a44265fb)
 
-# Build Pictures
+# BOM
+| **Name**           | **Designator**          | **Quantity** |
+|--------------------|-------------------------|--------------|
+| Headers            | MINI560                 | 4            |
+| MINI560 Pro 5V     | MINI560                 | 1            |
+| Headers            | ESP32-C3 SuperMini      | 2            |
+| ESP32-C3 SuperMini | ESP32-C3 SuperMini      | 1            |
+| Socket             | U5                      | 1            |        
+| Optoisolator 6N137 | U5                      | 1            |
+| 220Ω Resistor      | R5,R7,R8,R9,R10,R11,R12 | 7            |
+| 1kΩ Resistor       | R1,R2,R3,R4,R6          | 5            |
+| 1N4004 Diode       | D1,D2,D3,D4,D5          | 5            |
+| PN2222AL Transistor| U1,U2,U3,U4             | 4            |
+| 3mm LED            | LED1,LED2,LED3,LED4     | 4            |
+| 3.5mm TRS          | MIDIIN,MIDOUT,PEDAL1-4  | 6            |
+| 6.5mm TRS          | INPUT,OUTPUT            | 2            |
+| Omron G5V-2-H1     | K1,K2,K3,K4             | 4            |
+| DC Jack            | N/A                     | 1            |
+
+# Assembly
+
+#### Step 1: Resistors
+- **Install R1, R2, R3, R4, R6:**
+  - Place each resistor into its corresponding position on the PCB.
+  - Solder the leads and trim excess wire.
+- **Install R5, R7, R8, R9, R10, R11, R12:**
+  - Repeat the same process as above.
+
+#### Step 2: Diodes
+- **Install D1, D2, D3, D4, D5:**
+  - Align the cathode (marked end) with the PCB’s silkscreen.
+  - Solder and trim the leads.
+
+#### Step 3: Transistors
+- **Install U1, U2, U3, U4:**
+  - Ensure proper orientation and alignment.
+  - Solder the pins in place.
+
+#### Step 4: LEDs
+- **Install LED1, LED2, LED3, LED4:**
+  - Align the flat side of the LED with the PCB marking.
+  - Solder and trim leads.
+
+#### Step 5: Connectors and Jacks
+- **Install MIDIIN, MIDOUT, PEDAL1, PEDAL2, PEDAL3, PEDAL4:**
+  - Place the connectors in their respective positions.
+  - Solder all pins securely.
+- **Install INPUT, OUTPUT:**
+  - Install and solder one connector at a time to ensure proper alignment.
+
+#### Step 6: Relays
+- **Install K1, K2, K3, K4:**
+  - Place the relays into their designated slots.
+  - Solder them securely.
+
+#### Step 7: DC Jack
+- **Install the DC Jack:**
+  - Insert the jack into its position.
+  - Solder all contact points.
+
+#### Step 8: Integrated Circuits and Headers
+- **Solder the headers and sockets:**
+  - 4x 2pin headers for the MINI560 Pro
+  - 2x 8pin headers for the ESP32-C3
+  - 8 pin socket for the Optoisolator (U5)
+- **Insert MINI560 Pro:**
+  - Ensure the correct orientation of the PSU with voltage IN on the left and OUT on the right. There is an arrow on the bottom of the module to help with this.
+  - Place the module onto the previously soldered headers.
+- **Insert ESP32-C3 SuperMini:**
+  - Align the module pins with the corresponding footprint on the PCB.
+  - Place the module onto the previously soldered headers.
+- **Insert the Optoisolator (U5):**
+  - Place the IC into the previously soldered socket, ensuring correct orientation.
+
+
 ![Circuit Board Populated](https://i.imgur.com/NJytogt.jpeg)
 
 # 3.5 vs 6.5mm TRS
