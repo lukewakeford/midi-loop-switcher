@@ -19,11 +19,11 @@ A compact MIDI-controlled loop switcher designed to fit beneath a guitar pedalbo
 # BOM
 | **Name**           | **Designator**          | **Quantity** |
 |--------------------|-------------------------|--------------|
-| Headers            | MINI560                 | 4            |
+| 2.54-1*2P Header   | MINI560                 | 4            |
 | MINI560 Pro 5V     | MINI560                 | 1            |
-| Headers            | ESP32-C3 SuperMini      | 2            |
+| 2.54-1*8P Header   | ESP32-C3 SuperMini      | 2            |
 | ESP32-C3 SuperMini | ESP32-C3 SuperMini      | 1            |
-| Socket             | U5                      | 1            |        
+| DIP-8 Socket       | U5                      | 1            |        
 | Optoisolator 6N137 | U5                      | 1            |
 | 220Ω Resistor      | R5,R7,R8,R9,R10,R11,R12 | 7            |
 | 1kΩ Resistor       | R1,R2,R3,R4,R6          | 5            |
